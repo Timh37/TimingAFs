@@ -28,10 +28,14 @@ Please cite it when using this repository for your own studies.
 * FLOPROS data from Tiggeloven et al. (2020) (download [here](https://nhess.copernicus.org/articles/20/1025/2020/))
 * AR6 Sea-level projections at GESLA3 locations (uploaded [here]())
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Workflow
 1. Derive daily maxima from GESLA3 data and write them to CSV files using the script [daily_max_GESLA3_to_csv.py](https://github.com/Timh37/TimingAFs/blob/main/GPD_analysis/daily_max_GESLA3_to_csv.py).
 2. Load the CSV files and apply the method of Solari et al. (2017) to the daily maxima using [gpdfit_solaris_thres_gesla3.R](https://github.com/Timh37/TimingAFs/blob/main/GPD_analysis/gpdfit_solaris_thres_gesla3.R). This script automatically selects the extreme threshold and outputs central-estimate general Pareto distribution parameters and their uncertainty to NetCDF files.
 3. To project the timing of AFs, [project_AF_timing_ar6wfs.py](https://github.com/Timh37/TimingAFs/blob/main/project_timing/project_AF_timing_ar6wfs.py)  takes the GPD parameter estimates and fetches the FLOPROS estimates nearest to the GESLA3 locations. Using the GPD fits, the return curves and required SLR is computed. The timing of AFs is then projected by interpolating the timing of projected SLR onto required SLR, and all is stored in a single NetCDF file for all locations.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Prerequisites and built with
 
@@ -49,6 +53,7 @@ Please cite it when using this repository for your own studies.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Acknowledgements
+We thank Sebastian Solari for sharing his automatic threshold selection code and Timothy Tiggeloven for elucidating the FLOPROS estimates. R.E.K. and M.O. were supported by the National Science Foundation (NSF) as part of the Megalopolitan Coastal Transformation Hub (MACH) under NSF award ICER-2103754. V.M.-S. and A.B.A.S. were supported by PROTECT. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 869304, PROTECT contribution number XX.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
