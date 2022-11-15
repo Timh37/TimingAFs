@@ -26,7 +26,7 @@ Please cite it when using this repository for your own studies.
 ## Required input data
 * GESLA3 data ([download here](https://gesla787883612.wordpress.com/downloads/))
 * FLOPROS data from [Tiggeloven et al. (2020)](https://nhess.copernicus.org/articles/20/1025/2020/)
-* AR6 Sea-level projections (full sample total relative projections at GESLA3 data can be found here: to-do)
+* AR6 Sea-level projections at GESLA3 locations (uploaded [here]())
 
 ## Workflow
 1. Derive daily maxima from GESLA3 data and write them to CSV files using the script [daily_max_GESLA3_to_csv.py](https://github.com/Timh37/TimingAFs/blob/main/GPD_analysis/daily_max_GESLA3_to_csv.py).
