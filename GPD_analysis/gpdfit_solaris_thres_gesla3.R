@@ -33,9 +33,9 @@ print(i)
 DataFile <- paste( ndir_data,'/', nfiles[i], sep="")
 
 # load data
-data_hourly <- read.csv( DataFile, header = FALSE, sep = ",", skip = 1)
-colnames(data_hourly) <- c("Date","Value")
-# data_hourly[,2] <- data_hourly[,2] + 8
+data_daily <- read.csv( DataFile, header = FALSE, sep = ",", skip = 1)
+colnames(data_daily) <- c("Date","Value")
+# data_daily[,2] <- data_daily[,2] + 8
 
 # Decluster data
 Decluster_SW_Thres<-function(Data,Window_Width,u){
@@ -62,7 +62,7 @@ Decluster_SW_Thres<-function(Data,Window_Width,u){
   res<-list("N"=N,"Detrend"=Data[,2],"Declustered"=Declustered,"EventID"=EVENT.INDEX)
   return(res)
 } # this function applies declustering to values above mquant
-data.declust.SW95 <- Decluster_SW_Thres(Data=data_hourly, Window_Width=3, u= mquant)
+data.declust.SW95 <- Decluster_SW_Thres(Data=data_daily, Window_Width=3, u= mquant)
 
 # Test threshold using Solari's method - Plot sensitivity analysis 
 cidr <- getwd() 
@@ -74,7 +74,7 @@ jpeg(file=mypath)
 remove(data_Solari95)
 # tryCatch({
 data_Solari95<-GPD_Threshold_Solari(Event=data.declust.SW95$Declustered,
-                                       Data=na.omit(data_hourly[,-1]),N_Sim = 50,
+                                       Data=na.omit(data_daily[,-1]),N_Sim = 50,
                                        mu= 365.25,  Min_Quantile = mquant)
 
 dev.off()
@@ -94,7 +94,7 @@ jpeg(file=mypath)
 remove(GPD_fit_out)
 #tryCatch({
 
-GPD_fit_out <- GPD_Threshold_Solari_Sel(Event=data.declust.SW95$Declustered,Data=na.omit(data_hourly[,-1]),
+GPD_fit_out <- GPD_Threshold_Solari_Sel(Event=data.declust.SW95$Declustered,Data=na.omit(data_daily[,-1]),
                          Solari_Output=data_Solari95,
                          Thres=data_Solari95$Candidate_Thres,N_Sim = nbootf,
                          Alpha = 0.05,
