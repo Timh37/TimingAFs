@@ -4,7 +4,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#projectTimingESLs">projectTimingESLs</a></li>
+    <li><a href="#TimingAFs">TimingAFs</a></li>
     <li><a href="#Prerequisites-and-built-with">Prerequisites and built with</a></li>
     <li><a href="#Acknowledgements">Acknowledgements</a></li>
     <li><a href="#Contact">Contact</a></li>
@@ -12,7 +12,7 @@
   </ol>
 </details>
 
-# projectTimingESLs
+# TimingAFs
 Framework for projecting the timing of the increasing return frequencies of extreme sea levels.
 
 This code accompanies the manuscript:
