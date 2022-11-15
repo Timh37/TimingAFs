@@ -10,7 +10,7 @@ Generates samples of return curves for query return frequencies based on GPD fit
 import numpy as np
 from GPD_Z_from_F import Z_from_F_mhhw, Z_from_F_loc,Z_from_F_Sweet
 
-def rcurves_from_gpd(location,scale,shape,cov,avg_exceed,num_mc_samps,sample_freqs,extrap_method,mhhw=None,mhhw_freq=None):
+def rcurves_from_gpd_cov(location,scale,shape,cov,avg_exceed,num_mc_samps,sample_freqs,extrap_method,mhhw=None,mhhw_freq=None):
     """
     Generate return curves based on GPD fit and covariance matrix of scale & shape samples
     
@@ -54,9 +54,9 @@ def rcurves_from_gpd(location,scale,shape,cov,avg_exceed,num_mc_samps,sample_fre
         rc_ce = Z_from_F_Sweet(scale,shape,location,avg_exceed,sample_freqs)
     return rc_ce,rc_samples
 
-def rcurves_from_gpd_ats(location,scale,shape,avg_exceed,sample_freqs,extrap_method,scale_samples,shape_samples,mhhw=None,mhhw_freq=None):
+def rcurves_from_gpd_bootstrapped(location,scale,shape,avg_exceed,sample_freqs,extrap_method,scale_samples,shape_samples,mhhw=None,mhhw_freq=None):
     """
-    Generate return curves based on GPD fit and uncertainty derived from bootstrapping applied in the automatic threshold selection of Solari et al.
+    Generate return curves based on GPD fit and uncertainty derived from bootstrapping (e.g., as applied in the automatic threshold selection of Solari et al.)
     
     Input:
     location, scale, shape:     best-estimate GPD parameters
