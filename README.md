@@ -28,6 +28,11 @@ Please cite it when using this repository for your own studies.
 * FLOPROS data from [Tiggeloven et al. (2020)](https://nhess.copernicus.org/articles/20/1025/2020/)
 * AR6 Sea-level projections (full sample total relative projections at GESLA3 data can be found here: to-do)
 
+## Workflow
+1. Derive daily maxima from GESLA3 data using the scripts in */TimingAFs/GPD_analysis/*.
+2. Apply the method of Solari et al. (2017) to the daily maxima to automatically select the extremes threshold at each GESLA3 site, and derive best-estimate general Pareto distribution parameters and their uncertainty using bootstrapping with the script */TimingAFs/GPD_analysis/gpdfit_solaris_thres_gesla3.R*. This script reads in daily maxima stored to csv files for each site.
+3. Use the resulting GPD distributions to generate return curves, fetch benchmark frequencies from FLOPROS, compute required SLR and interpolate the timing of projected SLR to required SLR to project the timing of AFs, using the scripts in */TimingAFs/project_timing/*
+
 ## Prerequisites and built with
 
 * Python
