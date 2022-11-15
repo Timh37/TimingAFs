@@ -29,9 +29,9 @@ Please cite it when using this repository for your own studies.
 * AR6 Sea-level projections (full sample total relative projections at GESLA3 data can be found here: to-do)
 
 ## Workflow
-1. Derive daily maxima from GESLA3 data using the scripts in */TimingAFs/GPD_analysis/*.
-2. Apply the method of Solari et al. (2017) to the daily maxima to automatically select the extremes threshold at each GESLA3 site, and derive best-estimate general Pareto distribution parameters and their uncertainty using bootstrapping with the script */TimingAFs/GPD_analysis/gpdfit_solaris_thres_gesla3.R*. This script reads in daily maxima stored to csv files for each site.
-3. Use the resulting GPD distributions to generate return curves, fetch benchmark frequencies from FLOPROS, compute required SLR and interpolate the timing of projected SLR to required SLR to project the timing of AFs, using the scripts in */TimingAFs/project_timing/*
+1. Derive daily maxima from GESLA3 data and write them to CSV files using the script [daily_max_GESLA3_to_csv.py](https://github.com/Timh37/TimingAFs/blob/main/GPD_analysis/daily_max_GESLA3_to_csv.py).
+2. Load the CSV files and apply the method of Solari et al. (2017) to the daily maxima using [gpdfit_solaris_thres_gesla3.R](https://github.com/Timh37/TimingAFs/blob/main/GPD_analysis/gpdfit_solaris_thres_gesla3.R). This script automatically selects the extreme threshold and outputs central-estimate general Pareto distribution parameters and their uncertainty to NetCDF files.
+3. To project the timing of AFs, [project_AF_timing_ar6wfs.py](https://github.com/Timh37/TimingAFs/blob/main/project_timing/project_AF_timing_ar6wfs.py)  takes the GPD parameter estimates and fetches the FLOPROS estimates nearest to the GESLA3 locations. Using the GPD fits, the return curves and required SLR is computed. The timing of AFs is then projected by interpolating the timing of projected SLR onto required SLR, and all is stored in a single NetCDF file for all locations.
 
 ## Prerequisites and built with
 
