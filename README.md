@@ -34,6 +34,7 @@ Please cite it when using this repository for your own studies.
   * cartopy
   * cmocean
   * shapely
+  * gesla
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -43,7 +44,7 @@ Please cite it when using this repository for your own studies.
 
 ## Contact
 Tim Hermans
-tim.hermans@nioz.nl
+t.h.j.hermans@uu.nl
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
