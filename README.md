@@ -23,6 +23,11 @@ Please cite it when using this repository for your own studies.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Required input data
+* GESLA3 data ([download here](https://gesla787883612.wordpress.com/downloads/))
+* FLOPROS data from [Tiggeloven et al. (2020)](https://nhess.copernicus.org/articles/20/1025/2020/)
+* AR6 Sea-level projections (full sample total relative projections at GESLA3 data can be found here: to-do)
+
 ## Prerequisites and built with
 
 * Python
