@@ -49,6 +49,10 @@ Please cite it when using this repository for your own studies.
   * cmocean
   * shapely
   * gesla
+* R
+  * MultiHazard
+  * texmex
+  * ncdf4
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
