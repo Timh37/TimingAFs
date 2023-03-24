@@ -47,7 +47,7 @@ Please cite it when using this repository for your own studies.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Acknowledgements
-We thank Sebastian Solari for sharing his automatic threshold selection code and Timothy Tiggeloven for elucidating the FLOPROS estimates. R.E.K. and M.O. were supported by the National Science Foundation (NSF) as part of the Megalopolitan Coastal Transformation Hub (MACH) under NSF award ICER-2103754. V.M.-S. and A.B.A.S. were supported by PROTECT. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 869304, PROTECT contribution number XX.
+We thank S. Solari for sharing his automatic threshold selection code and T. Tiggeloven for elucidating the FLOPROS estimates. R.E.K. and M.O. were supported by the National Science Foundation (NSF) as part of the Megalopolitan Coastal Transformation Hub (MACH) under NSF award ICER-2103754. T.H.J.H., V.M.-S. and A.B.A.S. were supported by PROTECT. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement no. 869304, PROTECT contribution number 58. T.H.J.H. also received funding from the NPP programme of NWO.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
