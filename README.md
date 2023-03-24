@@ -5,7 +5,7 @@ TimingAFs is a novel framework for projecting the timing of frequency amplificat
 
 The code in this repository was used for the manuscript:
 ```
-The Timing of Decreasing Coastal Flood Protection Due to Sea-Level Rise (in revision for NCC), Hermans et al.
+Hermans, T.H.J., Malagón-Santos, V., Katsman, C.A. et al. The timing of decreasing coastal flood protection due to sea-level rise. Nat. Clim. Chang. (2023). https://doi.org/10.1038/s41558-023-01616-5
 ```
 Please cite it when using this repository for your own studies.
 
